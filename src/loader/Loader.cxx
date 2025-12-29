@@ -1,9 +1,17 @@
-#include <iostream>
+#include <print>
 
-#define SUCCESS 0
+#include <loader/Loader.hxx>
+
+constexpr std::string_view USAGE_MESSAGE = "Usage: loader filename";
 
 int main(int argc, char **argv)
 {
-    std::cout << "Hello world!\n";
-    return SUCCESS;
+    if (argc < 2)
+    {
+        std::println(stderr, USAGE_MESSAGE);
+        return EXIT_FAIL_ARGS;
+    }
+
+    std::println("Hello {}!", argv[1]);
+    return EXIT_SUCCESS;
 }
