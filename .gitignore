@@ -3,3 +3,6 @@ build
 
 # link to compile commands for clangd server
 compile_commands.json
+
+# ignore text editor caching
+.cache
