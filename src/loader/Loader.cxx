@@ -1,7 +1,13 @@
 #include <print>
 
+#include <cli/ArgParser.hxx>
+
 #include <loader/Loader.hxx>
 
+constexpr option ARR_OPTIONS[] =
+    {
+        {"x", "executable", true}
+    };
 constexpr std::string_view USAGE_MESSAGE = "Usage: loader filename";
 
 int main(int argc, char **argv)

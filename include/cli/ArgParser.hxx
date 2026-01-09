@@ -1,3 +1,5 @@
+#pragma once
+
 #include <string>
 #include <vector>
 
@@ -12,12 +14,12 @@ class ArgParser
 {
     private :
         std::vector<option> options;
-        std::size_t soptions;
+        std::size_t sOptions;
 
     public :
         /**
-         * create the options vector from an array 'options'
-         * 'soptions' should be greater than 0
+         * create the `options` vector from an array at `p_options`,
+         * pass array size as `s_options`
          */
-        ArgParser(option *options, std::size_t soptions);
+        ArgParser(option *p_options, std::size_t s_options);
 };
